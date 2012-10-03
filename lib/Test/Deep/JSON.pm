@@ -28,7 +28,7 @@ sub descend {
         $self->{error} = $@;
         return 0;
     }
-    Test::Deep::wrap($self->{val})->descend($parsed);
+    return Test::Deep::wrap($self->{val})->descend($parsed);
 }
 
 sub diagnostics {
@@ -50,15 +50,17 @@ Test::Deep::JSON - Compare JSON with Test::Deep
   use Test::Deep::JSON;
 
   cmp_deeply {
+      foo => 'bar',
       payload => '{"a":1}',
   }, {
-      payload => json({ a => 1 }),
+      foo => 'bar',
+      payload => json({ a => ignore() }),
   };
 
 =head1 DESCRIPTION
 
 Test::Deep::JSON provides C<json($expected)> function to expect that
-target can be parsed as a JSON string and matches (with C<cmp_deeply>) with
+target can be parsed as a JSON string and matches (by C<cmp_deeply>) with
 I<$expected>.
 
 =head1 FUNCTIONS
@@ -69,12 +71,12 @@ I<$expected>.
 
 Exported by default.
 
-$expected can be anything that C<Test::Deep> recognizes.
+I<$expected> can be anything that C<Test::Deep> recognizes.
 
 This parses the data as a JSON string, and compares the parsed object
 and I<$expected> by C<Test::Deep> functionality.
 
-Fails if JSON parsing is failed.
+Fails if the data cannot be parsed as a JSON.
 
 =back
 

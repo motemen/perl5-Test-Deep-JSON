@@ -8,15 +8,17 @@ Test::Deep::JSON - Compare JSON with Test::Deep
     use Test::Deep::JSON;
 
     cmp_deeply {
+        foo => 'bar',
         payload => '{"a":1}',
     }, {
-        payload => json({ a => 1 }),
+        foo => 'bar',
+        payload => json({ a => ignore() }),
     };
 
 # DESCRIPTION
 
 Test::Deep::JSON provides `json($expected)` function to expect that
-target can be parsed as a JSON string and matches (with `cmp_deeply`) with
+target can be parsed as a JSON string and matches (by `cmp_deeply`) with
 _$expected_.
 
 # FUNCTIONS
@@ -25,12 +27,12 @@ _$expected_.
 
 Exported by default.
 
-$expected can be anything that `Test::Deep` recognizes.
+_$expected_ can be anything that `Test::Deep` recognizes.
 
 This parses the data as a JSON string, and compares the parsed object
 and _$expected_ by `Test::Deep` functionality.
 
-Fails if JSON parsing is failed.
+Fails if the data cannot be parsed as a JSON.
 
 # AUTHOR
 
