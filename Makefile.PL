@@ -8,6 +8,7 @@ author_tests 'xt';
 
 requires 'Test::Deep';
 requires 'JSON';
+requires 'Exporter::Lite';
 
 test_requires 'Test::More';
 test_requires 'Test::Tester';
