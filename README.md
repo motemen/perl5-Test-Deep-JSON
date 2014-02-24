@@ -25,14 +25,14 @@ _$expected_.
 
 - json($expected)
 
-Exported by default.
+    Exported by default.
 
-_$expected_ can be anything that `Test::Deep` recognizes.
+    _$expected_ can be anything that `Test::Deep` recognizes.
 
-This parses the data as a JSON string, and compares the parsed object
-and _$expected_ by `Test::Deep` functionality.
+    This parses the data as a JSON string, and compares the parsed object
+    and _$expected_ by `Test::Deep` functionality.
 
-Fails if the data cannot be parsed as a JSON.
+    Fails if the data cannot be parsed as a JSON.
 
 # AUTHOR
 

@@ -16,3 +16,11 @@ carton.lock
 local/
 .prove
 Debian_CPANTS.txt
+/Test-Deep-JSON-*
+/.build
+/_build_params
+/Build
+/Build.bat
+!Build/
+!META.json
+!LICENSE

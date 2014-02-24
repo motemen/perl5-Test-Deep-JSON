@@ -1,0 +1,72 @@
+{
+   "abstract" : "Compare JSON with Test::Deep",
+   "author" : [
+      "motemen <motemen@gmail.com>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Minilla/v0.11.0, CPAN::Meta::Converter version 2.131560",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Test-Deep-JSON",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "xt",
+         "inc",
+         "share",
+         "eg",
+         "examples",
+         "author",
+         "builder"
+      ]
+   },
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.59",
+            "Test::More" : "0"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "CPAN::Meta" : "0",
+            "CPAN::Meta::Prereqs" : "0",
+            "Module::Build" : "0.38"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Test::CPAN::Meta" : "0",
+            "Test::MinimumVersion" : "0.10108",
+            "Test::Pod" : "1.41",
+            "Test::Spellunker" : "v0.2.7"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Exporter::Lite" : "0",
+            "JSON" : "0",
+            "Test::Deep" : "0",
+            "perl" : "5.008001"
+         }
+      }
+   },
+   "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/motemen/Test-Deep-JSON/issues"
+      },
+      "homepage" : "https://github.com/motemen/Test-Deep-JSON",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/motemen/Test-Deep-JSON",
+         "web" : "https://github.com/motemen/Test-Deep-JSON"
+      }
+   },
+   "version" : "0.02"
+}

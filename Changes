@@ -1,5 +1,7 @@
 Revision history for Perl extension Test::Deep::JSON
 
+{{$NEXT}}
+
 0.02    Thu Oct  4 10:42:36 JST 2012
         - fixed wrong dependencies
 
