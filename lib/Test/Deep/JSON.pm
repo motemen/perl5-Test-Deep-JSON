@@ -33,7 +33,8 @@ sub descend {
 
 sub diagnostics {
     my $self = shift;
-    return $self->{error};
+    return $self->{error} if defined $self->{error} && length $self->{error};
+    return $self->{val}->diagnostics(@_);
 }
 
 1;

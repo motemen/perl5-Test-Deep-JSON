@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 use Test::Tester;
-use Test::More tests => 5;
+use Test::More tests => 6;
 use Test::Deep;
 use Test::Deep::JSON;
 
@@ -62,5 +62,24 @@ subtest 'JSON parse error' => sub {
         };
     }, {
         ok => 0,
+    };
+};
+
+subtest 'failture on nested' => sub {
+    check_test sub {
+        cmp_deeply {
+            json => '{"foo":"X"}',
+        }, {
+            json => json(code(sub { ( $_[0]->{foo} eq 'Y', 'foo should be Y' ) }))
+        };
+    }, {
+        ok => 0,
+        diag => [ run_tests sub {
+            cmp_deeply {
+                json => '{"foo":"X"}'
+            }, {
+                json => code(sub { ( 0, 'foo should be Y' ) })
+            };
+        } ]->[1]->{diag},
     };
 };
