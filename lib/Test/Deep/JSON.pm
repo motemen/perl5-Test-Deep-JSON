@@ -4,7 +4,7 @@ use warnings;
 use 5.008_001;
 use Test::Deep ();
 use Test::Deep::Cmp;
-use JSON;
+use JSON::MaybeXS;
 use Exporter::Lite;
 
 our $VERSION = '0.04';

@@ -48,7 +48,7 @@
       "runtime" : {
          "requires" : {
             "Exporter::Lite" : "0",
-            "JSON" : "0",
+            "JSON::MaybeXS" : "0",
             "Test::Deep" : "0",
             "perl" : "5.008001"
          }
